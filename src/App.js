@@ -25,30 +25,93 @@ import NFTDetailsSale from "./Component/Individual/NFTSale";
 import toast, { Toaster } from "react-hot-toast";
 import CommunityStandards from "./Component/CommunityStandars";
 
-
 const App = () => {
   return (
     <WalletProvider>
       <div>
         <Navbar />
         <Routes>
-           <Route path="/" element={<Home />} />
-          
-          <Route path="/CurrentBid" element={<ProtectedRoute> <AuctionCards /></ProtectedRoute>} />
+          <Route path="/help" element={<Home />} />
+
+          <Route
+            path="/CurrentBid"
+            element={
+              <ProtectedRoute>
+                {" "}
+                <AuctionCards />
+              </ProtectedRoute>
+            }
+          />
           {/* Protected Routes */}
-          <Route path="/CreateNFt" element={<ProtectedRoute><NFTCreation /></ProtectedRoute>} />
-          <Route path="/drop" element={<ProtectedRoute><SmartContractForm /></ProtectedRoute>} />
-          <Route path="/create" element={<ProtectedRoute><NFTCreationForm /></ProtectedRoute>} />
-          <Route path="/cart" element={<ProtectedRoute><CartSummary /></ProtectedRoute>} />
-          <Route path="/buy/:id" element={<ProtectedRoute><NFTDetailPage /></ProtectedRoute>} />
+          <Route
+            path="/CreateNFt"
+            element={
+              <ProtectedRoute>
+                <NFTCreation />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/drop"
+            element={
+              <ProtectedRoute>
+                <SmartContractForm />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/create"
+            element={
+              <ProtectedRoute>
+                <NFTCreationForm />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <ProtectedRoute>
+                <CartSummary />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/buy/:id"
+            element={
+              <ProtectedRoute>
+                <NFTDetailPage />
+              </ProtectedRoute>
+            }
+          />
           {/* <Route path="/buy/:id" element={<NFTDetailPage />} /> */}
 
-          <Route path="/sale" element={<ProtectedRoute><NFTDetailsSale /></ProtectedRoute>} />
+          <Route
+            path="/sale"
+            element={
+              <ProtectedRoute>
+                <NFTDetailsSale />
+              </ProtectedRoute>
+            }
+          />
           {/* <Route path="/detail" element={<NFTDetailPage />} /> */}
           <Route path="/collection" element={<NFTCollectionPage />} />
-          <Route path="/profilepage" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+          <Route
+            path="/profilepage"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
           {/* <Route path="/profilepage" element={<ProfilePage />} /> */}
-          <Route path="/favourite" element={<ProtectedRoute><Favourite /></ProtectedRoute>} />
+          <Route
+            path="/favourite"
+            element={
+              <ProtectedRoute>
+                <Favourite />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/help" element={<HelpCenter />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/about" element={<AboutPage />} />

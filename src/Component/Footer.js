@@ -2,7 +2,13 @@
 
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { BsTelegram, BsTwitterX } from "react-icons/bs";
+import {
+  BsTelegram,
+  BsTwitterX,
+  BsInstagram,
+  BsFacebook,
+  BsYoutube,
+} from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function Footer() {
@@ -42,7 +48,7 @@ export default function Footer() {
           {/* Join the community */}
           <div>
             <h3 className="text-xl font-semibold mb-3">Join the community</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
               <Link
                 to="https://t.me/+YUAQVX-sDoM1NTdh"
                 className="text-black text-2xl p-2 rounded-md hover:bg-gray-300 transition"
@@ -54,6 +60,24 @@ export default function Footer() {
                 className="text-black text-2xl p-2 rounded-md hover:bg-gray-300 transition"
               >
                 <BsTwitterX />
+              </Link>
+              <Link
+                to="https://www.facebook.com/NYWNFTS"
+                className="text-black text-2xl p-2 rounded-md hover:bg-gray-300 transition"
+              >
+                <BsFacebook />
+              </Link>
+              <Link
+                to="https://www.instagram.com/nywnft"
+                className="text-black text-2xl p-2 rounded-md hover:bg-gray-300 transition"
+              >
+                <BsInstagram />
+              </Link>
+              <Link
+                to="https://www.youtube.com/@NYWNFT"
+                className="text-black text-2xl p-2 rounded-md hover:bg-gray-300 transition"
+              >
+                <BsYoutube />
               </Link>
               <Link
                 to="mailto:info@nywnft.com"
@@ -123,7 +147,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/privacy-polices" className="text-sm hover:underline">
-                  Privacy Polices{" "}
+                  Privacy Polices
                 </Link>
               </li>
             </ul>
@@ -151,7 +175,6 @@ export default function Footer() {
                   Community Standards
                 </Link>
               </li>
-
               <li>
                 <Link
                   to="https://nywnft-organization.gitbook.io/nywnft/~/changes/1/getting-started/get-started"
